@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/card"
+            android:layout_width="wrap_content"
+            android:layout_height="280dp"
+            android:layout_gravity="top"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:elevation="14dp"
+            android:text="TextView"
+            card_view:cardCornerRadius="8dp"
+            card_view:contentPaddingBottom="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="240dp"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/iv_picture"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    android:layout_gravity="center|top"
+                    android:elevation="18dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pasta"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintHorizontal_bias="0.0"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="63dp"
+                    android:layout_marginTop="8dp"
+                    card_view:layout_constraintStart_toStartOf="@+id/frame"
+                    card_view:layout_constraintTop_toBottomOf="@+id/tv_title"
+                    card_view:srcCompat="@drawable/ic_clock"
+                    android:layout_marginLeft="63dp" />
+
+            <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:maxLines="2"
+                    android:text="Veg Cheese Pasta with peri peri"
+                    android:textColor="#3f3f3f"
+                    android:textSize="24sp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/iv_picture"
+                    card_view:layout_constraintVertical_bias="0.0" />
+
+
+            <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                    android:visibility="gone"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/imageview"
+                    tools:visibility="gone" />
+
+            <TextView
+                    android:id="@+id/tv_ready_in_minuts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="12dp"
+                    android:text="10 minuts"
+                    card_view:layout_constraintStart_toEndOf="@+id/imageview"
+                    card_view:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
