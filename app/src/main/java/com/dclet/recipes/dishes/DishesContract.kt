@@ -26,9 +26,9 @@ class DishesContract {
 
         fun setCategoriesTabs(categories : List<FoodCategory>)
 
-        fun showRecipes(recipes : List<Dish>)
+        fun showRecipe(recipes : List<Dish>)
 
-        fun showRecipes(recipeId: Long)
+        fun showRecipe(recipeId: Long)
 
         fun showLoading(show : Boolean)
 

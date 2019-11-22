@@ -40,7 +40,8 @@ class DishFragment @Inject constructor() : DishContract.View, DaggerFragment() {
         var recipe = RecipeFragment()
         subviews = mutableListOf(ingredients,recipe)
 
-        rootView.pager.adapter = DishPageAdapter(fragmentManager!!, listOf(ingredients,recipe), listOf("Ingradients","Recipe"))
+        rootView.pager.adapter = DishPageAdapter(fragmentManager!!, listOf(ingredients,recipe), listOf(getString(
+                    R.string.ingredients),getString(R.string.recipe)))
         rootView.tab_layout.setupWithViewPager(rootView.pager)
         rootView.tab_layout.getTabAt(0)?.setIcon(R.drawable.ic_harvest)
         rootView.tab_layout.getTabAt(1)?.setIcon(R.drawable.ic_mortar)

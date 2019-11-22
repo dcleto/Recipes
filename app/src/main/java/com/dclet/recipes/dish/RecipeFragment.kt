@@ -9,6 +9,7 @@ import android.view.ViewGroup
 
 import com.dclet.recipes.R
 import com.dclet.recipes.model.DishDetail
+import com.dclet.recipes.utils.StringUtils
 import kotlinx.android.synthetic.main.fragment_recipe.*
 
 /**
@@ -30,7 +31,7 @@ class RecipeFragment : DishContract.View, Fragment() {
     }
 
     override fun setDetails(detail: DishDetail) {
-        tv_preparation.setText(detail.instructions)
+        tv_preparation.setText(StringUtils.stripHtml(detail.instructions))
         var st = StringBuilder ()
         detail.extendedIngredients.forEach { ingredient ->
             st.append(ingredient.original)

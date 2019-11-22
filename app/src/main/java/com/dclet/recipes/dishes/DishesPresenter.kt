@@ -1,7 +1,6 @@
 package com.dclet.recipes.dishes
 
 import android.util.Log
-import com.dclet.recipes.data.RecipesDataSource
 import com.dclet.recipes.data.source.RecipesRepository
 import com.dclet.recipes.di.ActivityScoped
 import com.dclet.recipes.model.FoodCategory
@@ -42,7 +41,7 @@ class DishesPresenter @Inject constructor(var repo : RecipesRepository, var pref
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 view?.showLoading(false)
-                view?.showRecipes(it.meals)
+                view?.showRecipe(it.meals)
             },{ err->
                 view?.showLoading(false)
                 Log.e("DishesPresenter ",err.message)
@@ -57,7 +56,7 @@ class DishesPresenter @Inject constructor(var repo : RecipesRepository, var pref
     }
 
     override fun openRecipe(recipeId: Long) {
-        view?.showRecipes(recipeId)
+        view?.showRecipe(recipeId)
     }
 
     override fun attach(v: DishesContract.View) {

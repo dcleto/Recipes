@@ -105,11 +105,11 @@ class DishesFragment  @Inject constructor(): DishesContract.View, DaggerFragment
         }
     }
 
-    override fun showRecipes(recipes: List<Dish>) {
+    override fun showRecipe(recipes: List<Dish>) {
         adapter.setData(recipes)
     }
 
-    override fun showRecipes(recipeId: Long) {
+    override fun showRecipe(recipeId: Long) {
         var intent = Intent(activity, DishActivity::class.java)
         intent.putExtra(DishActivity.EXTRA_DISH_ID,recipeId)
         startActivity(intent)
