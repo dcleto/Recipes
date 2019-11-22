@@ -52,6 +52,8 @@ dependencies {
     implementation "com.google.dagger:dagger-android:$daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    kaptTest "com.google.dagger:dagger-compiler:$daggerVersion"
+
 
     kapt "androidx.room:room-compiler:$room_version"
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
@@ -59,4 +61,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    testImplementation 'org.mockito:mockito-core:2.10.0'
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+
 }
